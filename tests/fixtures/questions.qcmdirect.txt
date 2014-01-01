@@ -1,0 +1,5 @@
+The Moodle project was started by:
+Petr Skoda
+Martin Dougiamas	V
+Eloy Lafuente
+Tim Hunt
