@@ -19,10 +19,10 @@
  * Language strings for the QCM Direct import/export format.
  *
  * @package qformat_qcmdirect
- * @copyright 2010 Jean-Michel Védrine
+ * @copyright 2010 Jean-Michel VÃ©drine
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['pluginname'] = 'Format QCM Direct';
-$string['mustspecifyrightanswer'] = 'Chaque question doit comporter au moins une bonne réponse. Celle-ci n\'en comporte pas.';
-$string['notenoughchoices'] = 'Chaque question doit comporter au moins deux propositions de réponses. Celle-ci n\'en comporte que {$a}.';
+$string['mustspecifyrightanswer'] = 'Chaque question doit comporter au moins une bonne rÃ©ponse. Celle-ci n\'en comporte pas.';
+$string['notenoughchoices'] = 'Chaque question doit comporter au moins deux propositions de rÃ©ponses. Celle-ci n\'en comporte que {$a}.';

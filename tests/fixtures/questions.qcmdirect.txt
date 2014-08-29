@@ -3,3 +3,10 @@ Petr Skoda
 Martin Dougiamas	V
 Eloy Lafuente
 Tim Hunt
+
+What animals are amphibians ?
+Newt	V
+Cat
+Bee
+Frog	V
+Toad	V

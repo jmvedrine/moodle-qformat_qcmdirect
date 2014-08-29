@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * GIFT with media format question importer.
+ * Import export from QCM direct text files.
  *
- * @package    qformat_giftmedia
+ * @package    qformat_qcmdirect
  * @copyright  2013 Jean-Michel Vedrine
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -67,6 +67,8 @@ class qformat_qcmdirect extends qformat_default {
         define ('UTF16_BIG_ENDIAN_BOM'   , chr(0xFE) . chr(0xFF));
         define ('UTF16_LITTLE_ENDIAN_BOM', chr(0xFF) . chr(0xFE));
         define ('UTF8_BOM'               , chr(0xEF) . chr(0xBB) . chr(0xBF));
+		
+		$gradeoptionsfull = question_bank::fraction_options_full();
 
         // First implode lines again.
         $texte = implode($lines);
@@ -159,6 +161,11 @@ class qformat_qcmdirect extends qformat_default {
                     $questions[] = $question;
                 } else {
                     $question->single = 0;
+					foreach ($question->fraction as $key => $fraction) {
+					    if ($fraction >0.9) {
+						    $question->fraction[$key] = match_grade_options($gradeoptionsfull, 1/$rightans, 'nearest');
+					    }
+					}
                     $questions[] = $question;
                 }
 
